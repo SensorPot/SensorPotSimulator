@@ -21,7 +21,7 @@ setInterval(function () {
             const value = Math.ceil(Math.random() * 5000);
             let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
                 "\"lighting\": \"" + value.toString() + "\"" +
-                "}"
+                "}}"
             element.publish("publish", payload, {qos: 0, retain: true});
             console.log("Publish lighting value: " + value.toString());
         })
@@ -34,7 +34,7 @@ setInterval(function () {
             const value = Math.floor(Math.random() * 51) + 30;
             let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
                 "\"humidity\": \"" + value.toString() + "\"" +
-                "}"
+                "}}"
             console.log("Publish humidity value: " + value.toString());
             element.publish("publish", payload, {qos: 0, retain: true});
         }
@@ -48,7 +48,7 @@ setInterval(function () {
             const value = Math.floor(Math.random() * 21) + 15;
             let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
                 "\"temperature\": \"" + value.toString() + "\"" +
-                "}"
+                "}}"
             element.publish("publish", payload, {qos: 0, retain: true});
             console.log("Publish temperature value: " + value.toString());
         })
