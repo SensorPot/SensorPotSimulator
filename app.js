@@ -1,14 +1,10 @@
-//Overall Sensor Number, (Performance Caution!!!):
-const clientNum = 1000;
-//Lumen update Interval, 1000 = 1S
-const lumenInterval = 3000;
-//Humidity update Interval, 1000 = 1S
-const humidityInterval = 5000;
-//Temperature update Interval, 1000 = 1S
-const temperatureInterval = 10000;
-
+require('dotenv').config();
 const mqtt = require('mqtt');
-const brokerUrl = "mqtt://127.0.0.1:1883";
+const clientNum = process.env.SIMULATED_USERS;
+const lumenInterval = process.env.LUMEN_INTERVAL;
+const humidityInterval = process.env.HUMIDITY_INTERVAL;
+const temperatureInterval = process.env.TEMPERATURE_INTERVAL;
+const brokerUrl = process.env.BROKER_URL;
 
 const clients = [];
 let index = 1;

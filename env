@@ -1,0 +1,14 @@
+# Overall Sensor Number, (Performance Caution!!!):
+SIMULATED_USERS=100
+
+# Lumen update Interval, 1000 = 1S
+LUMEN_INTERVAL=3000
+
+# Humidity update Interval, 1000 = 1S
+HUMIDITY_INTERVAL=5000
+
+# Temperature update Interval, 1000 = 1S
+TEMPERATURE_INTERVAL= 10000
+
+# MQTT BROKER URL
+BROKER_URL = 'mqtt://127.0.0.1:1883'
