@@ -9,7 +9,7 @@ const brokerUrl = process.env.BROKER_URL;
 const clients = [];
 let index = 1;
 while (clients.length < clientNum) {
-    clients.push(mqtt.connect(brokerUrl, {clientId: "client" + index}));
+    clients.push(mqtt.connect(brokerUrl, {clientId: index.toString()}));
     index++;
 }
 
@@ -19,7 +19,7 @@ setInterval(function () {
         element => {
             //console.log(element)
             const value = Math.ceil(Math.random() * 5000);
-            let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
+            let payload = "{\"sensorID\":" + element.options.clientId + ",\"timestamp\":" + Date.now() + ",\"payload\":{" +
                 "\"lighting\": \"" + value.toString() + "\"" +
                 "}}"
             element.publish("publish", payload, {qos: 0, retain: true});
@@ -32,7 +32,7 @@ setInterval(function () {
     clients.forEach(
         element => {
             const value = Math.floor(Math.random() * 51) + 30;
-            let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
+            let payload = "{\"sensorID\":" + element.options.clientId + ",\"timestamp\":" + Date.now() + ",\"payload\":{" +
                 "\"humidity\": \"" + value.toString() + "\"" +
                 "}}"
             console.log("Publish humidity value: " + value.toString());
@@ -46,7 +46,7 @@ setInterval(function () {
     clients.forEach(
         element => {
             const value = Math.floor(Math.random() * 21) + 15;
-            let payload = "{\"sensorID\":\"" + "s_" + element.options.clientId + "\",\"timestamp\":\"" + Date.now() + "\",\"payload\":{" +
+            let payload = "{\"sensorID\":" + element.options.clientId + ",\"timestamp\":" + Date.now() + ",\"payload\":{" +
                 "\"temperature\": \"" + value.toString() + "\"" +
                 "}}"
             element.publish("publish", payload, {qos: 0, retain: true});
