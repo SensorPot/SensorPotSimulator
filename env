@@ -1,4 +1,10 @@
-# Overall Sensor Number, (Performance Caution!!!):
+# MQTT BROKER URL
+BROKER_URL = 'mqtt://127.0.0.1:1883'
+
+# Read Sensor List from Database? If so the app wont simulate fake sensors
+READ_SENSOR_FROM_DB = true
+
+# Overall Fake Sensor Number, (Performance Caution!!!)
 SIMULATED_USERS=100
 
 # Lumen update Interval, 1000 = 1S
@@ -10,5 +16,3 @@ HUMIDITY_INTERVAL=5000
 # Temperature update Interval, 1000 = 1S
 TEMPERATURE_INTERVAL= 10000
 
-# MQTT BROKER URL
-BROKER_URL = 'mqtt://127.0.0.1:1883'
