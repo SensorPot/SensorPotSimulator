@@ -2,11 +2,13 @@
 
 Sensor Simulator for SensorPot Project
 
+The project support both simulated sensors or sensors defined in SensorPot database.
+
 ## Running Steps
 
 1. Copy ```env``` to ```.env```
 2. Configure options
-3. Start the program by ```node app.js```
+3. Start the program by ```node app.js``` directly
 
 ## Configuration
 
@@ -29,3 +31,7 @@ Sensor Simulator for SensorPot Project
 #### MQTT BROKER URL
 
 ```BROKER_URL = 'mqtt://127.0.0.1:1883'```
+
+#### Simulate Sensor Data based on sensor stored in database
+
+```READ_SENSOR_FROM_DB = true```

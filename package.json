@@ -1,14 +1,17 @@
 {
   "name": "sensor_pot_simulator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "Sensor Simulator for SensorPot Project. The project support both simulated sensors or sensors defined in SensorPot database.",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mqtt",
+    "simulator"
+  ],
+  "author": "Raistlin TAO",
   "license": "ISC",
   "dependencies": {
     "mqtt": "^4.2.8",
